@@ -1,0 +1,107 @@
+.faq {
+  background-color: $secondary-background;
+}
+
+.faq__container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.faq__title {
+  @include indent-reset;
+  @include custom-h3($primary-text-light);
+
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+.faq__tabs {
+  @include list-reset;
+
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 10px;
+  padding-bottom: 35px;
+}
+
+.faq__accordion {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__accordion--hidden {
+  display: none;
+}
+
+.faq__item {
+  border-top: 1px solid $secondary-border-light;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.faq__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  gap: 22px;
+  align-items: center;
+}
+
+.faq__item:last-child {
+  border-bottom: 1px solid $accordion-control-primary;
+  padding-bottom: 20px;
+}
+
+.faq__control {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: $accordion-control-primary;
+  border-radius: 50%;
+  transition: all ease 0.5ms;
+}
+
+.faq__control--plus {
+  border: 1px solid $accordion-control-primary;
+  background: none;
+}
+
+.faq__control::before {
+  content: "";
+  position: absolute;
+  mask-image: url("/__spritemap#sprite-minus-view");
+  width: 14px;
+  height: 14px;
+  mask-repeat: no-repeat;
+  mask-size: 14px 14px;
+  background-color: $primary-border-dark;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faq__control--plus::before {
+  mask-image: url("/__spritemap#sprite-plus-view");
+  background-color: $accordion-control-primary;
+}
+
+.faq__name {
+  @include indent-reset;
+  @include custom-h5($primary-text-light);
+}
+
+.faq__text {
+  @include indent-reset;
+  @include text-l($primary-text-light);
+
+  padding-top: 20px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  overflow: hidden;
+}
+
+.faq__text--hidden {
+  max-height: 0;
+  padding: 0;
+}

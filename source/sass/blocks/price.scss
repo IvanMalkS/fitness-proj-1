@@ -1,0 +1,55 @@
+.price {
+  background-color: $secondary-background;
+}
+
+.price__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $primary-text-light;
+}
+
+.price__title {
+  @include indent-reset;
+  @include custom-h3($primary-text-light);
+
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.price__filters {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.price__filters::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: $default-tab-border;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.price__filter {
+  color: $text-ultra-light;
+  padding-bottom: 2px;
+}
+
+.price__filter--current {
+  color: $primary-text-light;
+  border-bottom: 2px solid $primary-tab-border;
+}
+
+.price__tab {
+  color: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: none;
+}

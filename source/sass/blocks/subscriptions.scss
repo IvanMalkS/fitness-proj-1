@@ -1,0 +1,65 @@
+.subscriptions {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.subsciptions__cart {
+  padding: 50px 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background-color: $primary-background;
+  text-align: center;
+}
+
+.subscriptions__name {
+  @include indent-reset;
+  @include custom-h4($primary-text-light);
+}
+
+.subscriptions__time {
+  @include indent-reset;
+  @include text-m($primary-text-light);
+}
+
+.subscriptions__prices {
+  position: relative;
+}
+
+.subscriptions__price-value {
+  @include indent-reset;
+  @include numbers-m($secondary-text-light);
+}
+
+.subscriptions__price-currency {
+  @include indent-reset;
+
+  background-image: url("/__spritemap#sprite-rub-view");
+  background-size: 24px 33px;
+  width: 24px;
+  height: 33px;
+}
+
+.subscriptions__price-value--bg-shadow {
+  @include numbers-xl($text-shadow);
+
+  position: relative;
+}
+
+.subscriptions__price {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.subscriptions__buy {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}

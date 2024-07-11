@@ -1,0 +1,64 @@
+/* здесь используйте глобальные переменные */
+// dark - dark/black theme
+// light - light/white theme
+
+// text colors
+$primary-text-light: #102654;
+$primary-text-dark: #ffffff;
+$secondary-text-light: #103aae;
+$text-shadow: rgba(232, 232, 232, 0.5);
+$text-ultra-light: rgba(16, 38, 84, 0.5);
+$text-button-secondary: #1c3374;
+
+// text gradient
+$number-gradient: linear-gradient(127.61deg, #d10aa2 0, #0041ca 45.58%);
+
+// buttons colors
+$primary-border-light: #102654;
+$primary-border-dark: #ffffff;
+$secondary-border-light: #74819c;
+$primart-gradient: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+$pirmary-hover: linear-gradient(148.82deg, #d10aa2 0.85%, #00359f 100%);
+$pirmary-focus: #d10a42;
+$accordion-control-primary: #1c3374;
+$tab-border: rgba(16, 38, 84, 0.2);
+$tab-background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+
+
+// backgrounds colors
+$primary-background: #ffffff;
+$secondary-background: #f8f9fc;
+$banner-background: #ed0233;
+$main-background: linear-gradient(90deg, #1c3477 0%, #1c3477 0.01%, #1a3578 39.11%, #73184b 75.5%, #b4022a 100%);
+$footer-background: #030a1a;
+$seconadary-blocks: #1c3374;
+$seconadary-blocks-dark: #102654;
+
+// shadows
+$seconadary-blocks-shadow: rgba(28, 51, 116, 0.2);
+
+// icons color
+$primary-icon-light: #102654;
+$primary-icon-dark: #ffffff;
+
+// forms colors
+$primary-form-color: #ffffff;
+$error-form-color: #ff121f;
+
+// button-play
+$default-play-border: #ed0233;
+$default-play-bg: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+$default-play-fill: #ffffff;
+
+// tabs colors
+$default-tab-border: rgba(120, 120, 120, 0.2);
+$primary-tab-border: #d10a42;
+
+// fonts
+$primary-font: "Alumni Sans", "Helvetica Neue", arial, sans-serif;
+$secondary-font: "Roboto Condensed", "Arial Narrow", arial, sans-serif;
+
+// media
+$tablet-width: 768px;
+$desktop-width: 1366px;
+$mobile-width-only: 767px;

@@ -1,0 +1,34 @@
+.juri__container {
+  padding-top: 41px;
+  padding-bottom: 40px;
+}
+
+.juri__title {
+  @include indent-reset;
+  @include custom-h3($primary-text-light);
+
+  text-align: center;
+  padding-bottom: 19px;
+}
+
+.juri__image {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+.juri__name {
+  @include indent-reset;
+  @include custom-h4($primary-text-dark);
+
+  font-weight: 400;
+  text-align: center;
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.juri__list {
+  @include list-reset;
+}

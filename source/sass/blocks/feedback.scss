@@ -1,0 +1,39 @@
+.feedback {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 70px;
+  background-color: $seconadary-blocks-dark;
+}
+
+.feedback::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  left: -15px;
+  right: -15px;
+  width: calc(100% + 30px);
+  height: 100%;
+  background-color: $seconadary-blocks-dark;
+}
+
+.feedback__title {
+  @include indent-reset();
+  @include custom-h3($primary-text-dark);
+  padding-bottom: 31px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.feedback__submit {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  font-size: 12px;
+  line-height: 12px;
+  color: $primary-text-dark;
+  border: 2px solid $primary-border-dark;
+}

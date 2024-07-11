@@ -1,0 +1,30 @@
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $primary-text-light;
+}
+
+.contacts__title {
+  @include indent-reset();
+  @include custom-h3($primary-text-light);
+  padding-bottom: 34px;
+}
+
+.contacts__list {
+  @include list-reset();
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contacts__name {
+  @include custom-h5($primary-text-light);
+  display: block;
+  padding-bottom: 12px;
+}
+
+.contacts__text {
+  @include text-s($primary-text-light);
+  display: block;
+  text-decoration: none;
+}

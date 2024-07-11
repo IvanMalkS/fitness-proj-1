@@ -1,0 +1,113 @@
+.about {
+  position: relative;
+  height: calc(100% + 280px + 36px);
+  min-height: calc(100% + 280px + 36px);
+}
+
+.about__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: $primary-text-light;
+}
+
+.about__title {
+  @include indent-reset;
+  @include custom-h3($primary-text-light);
+
+  padding-bottom: 12px;
+}
+
+.about__subtitle {
+  @include indent-reset;
+  @include custom-h6($primary-text-light);
+
+  padding-bottom: 37px;
+  display: block;
+}
+
+.about__text {
+  @include indent-reset;
+  @include text-m($primary-text-light);
+}
+
+.about__text-br {
+  display: block;
+  width: 100%;
+}
+
+.about__text-content {
+  padding-bottom: 521px;
+}
+
+.about__image {
+  position: absolute;
+  width: 320px;
+  height: 280px;
+  bottom: 246px;
+  left: 0;
+  right: 0;
+}
+
+.about__video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 320px;
+  height: 170px;
+  bottom: 40px;
+}
+
+.about__play {
+  @include indent-reset();
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.about__play-icon {
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid $default-play-border;
+
+  width: 72px;
+  height: 72px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about__play-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 22px;
+  height: 22px;
+  background-color: $default-play-fill;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+  mask-image: url("/__spritemap#sprite-play-view");
+}
+
+.about__play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: $primary-background;
+  width: 52px;
+  height: 52px;
+  background-size: cover;
+  background-image: $default-play-bg;
+
+}

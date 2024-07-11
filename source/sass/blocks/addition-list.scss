@@ -1,0 +1,31 @@
+.addition-list {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.addition-list__item {
+  border: 7px solid transparent;
+  border-image: $primart-gradient 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 20px 30px;
+  padding-top: 21px;
+  padding-bottom: 19px;
+}
+
+.addition-list__name {
+  @include indent-reset;
+  @include custom-h4 ($primary-text-light);
+}
+
+.addition-list__description {
+  @include indent-reset;
+  @include text-m($primary-text-light);
+
+  text-align: center;
+}

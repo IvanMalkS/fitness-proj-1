@@ -1,0 +1,102 @@
+.offers__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.offers__title {
+  @include indent-reset;
+  @include custom-h3($primary-text-light);
+
+  padding-bottom: 711.5px;
+  text-align: center;
+}
+
+.offers__main {
+  position: relative;
+}
+
+.offers__wrapper {
+  display: block;
+  position: absolute;
+  min-width: 320px;
+  height: 360px;
+  bottom: 40px;
+  left: -15px;
+  right: -15px;
+}
+
+.offers__image {
+  display: block;
+  min-width: 320px;
+  height: 360px;
+}
+
+.offers__text {
+  position: absolute;
+  width: 100%;
+  min-height: 271px;
+  background-color: $banner-background;
+  bottom: 400px;
+  padding: 30px 15px;
+  color: $primary-text-dark;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.offers__text * {
+  position: relative;
+  z-index: 1;
+}
+
+.offers__text::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 30px);
+  height: 100%;
+  background-color: $banner-background;
+  left: -15px;
+  right: -15px;
+  bottom: 0;
+  top: 0;
+  z-index: auto;
+}
+
+.offers__main-offer {
+  @include indent-reset;
+
+  text-align: center;
+}
+
+.offers__duration {
+  display: block;
+
+  @include custom-h4($primary-text-dark);
+}
+
+.offers__price {
+  display: block;
+
+  @include numbers-l($primary-text-dark);
+
+  margin-top: 9px;
+}
+
+.offers__subscription {
+  @include indent-reset;
+  @include text-l($primary-text-dark);
+
+  text-align: center;
+  padding-left: 44px;
+  padding-right: 44px;
+}
+
+.offers__price-currency {
+  position: absolute;
+  z-index: auto;
+}
+
+.offers__addition-list {
+  @include indent-reset;
+}

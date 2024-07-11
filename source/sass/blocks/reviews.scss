@@ -1,0 +1,45 @@
+.reviews__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.reviews__title {
+  @include indent-reset;
+  @include custom-h3($primary-text-light);
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.reviews__list {
+  @include list-reset;
+  display: flex;
+  gap: 50px;
+  margin-left: 25px;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 240px;
+  padding: 30px 25px;
+  text-align: center;
+  background-color: $seconadary-blocks;
+  box-shadow: 0 0 40px 0 $seconadary-blocks-shadow;
+  color: $primary-text-dark;
+}
+
+.reviews__image {
+  padding-bottom: 3px;
+}
+
+.reviews__name {
+  @include indent-reset();
+  @include custom-h6($primary-text-dark);
+  padding-bottom: 16px;
+}
+
+.reviews__text {
+  @include indent-reset();
+  @include text-m($primary-text-dark);
+}
