@@ -8,14 +8,34 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    flex-direction: row;
+    gap: 36px;
+    min-width: 396px;
+  }
 }
 
 .main-footer__nav-list {
   @include list-reset();
   display: flex;
   max-width: 290px;
-  gap: 35px;
+  gap: 20px 35px;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+    gap: 30px;
+    min-width: 391px;
+    max-width: 463px;
+    margin-top: 1px;
+  }
+}
+
+.main-footer__nav-item {
+  display: flex;
 }
 
 .main-footer__nav-link {

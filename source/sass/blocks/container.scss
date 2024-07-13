@@ -6,12 +6,13 @@
   padding-right: 15px;
 
   @media (min-width: $tablet-width) {
-    width: 100%;
-    max-width: 746px;
+    padding-left: 45px;
+    padding-right: 45px;
+    max-width: $tablet-width;
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
-    max-width: 1260px;
+    padding-left: 103px;
+    padding-right: 103px;
   }
 }

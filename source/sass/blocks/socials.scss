@@ -4,6 +4,12 @@
   gap: 20px;
   max-width: 120px;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    min-width: 105px;
+    gap: 15px;
+    max-width: 106px;
+  }
 }
 
 .socials__link {
@@ -26,7 +32,7 @@
   background-color: $footer-background;
   width: 25px;
   height: 25px;
-  mask-size: 22px 22px;
+  mask-size: 15px 15px;
 }
 
 .socials__link--vk::before {

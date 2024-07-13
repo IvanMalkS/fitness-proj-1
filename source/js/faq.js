@@ -8,8 +8,8 @@ const initTabsSwitch = () => {
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      tabs.forEach((tab) => tab.classList.remove('button--tab-current'))
-      tab.classList.add('button--tab-current')
+      tabs.forEach((tab) => tab.classList.remove('faq__tab-button--current'))
+      tab.classList.add('faq__tab-button--current')
 
       const tabAccordionId = tab.getAttribute('data-tab');
       accordions.forEach((index) => {

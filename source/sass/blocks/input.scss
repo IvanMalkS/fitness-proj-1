@@ -25,15 +25,20 @@
   &--invalid {
     border-bottom: 1px solid $error-form-color;
   }
+
+  @media (min-width: $tablet-width) {
+    @include text-s($primary-text-dark);
+  }
 }
 
 .input__control::placeholder {
   @include text-m(inherit);
   opacity: 0.4;
-  font-size: 14px;
-  line-height: 22px;
   font-weight: 300;
 
+  @media (min-width: $tablet-width) {
+    @include text-s($primary-text-dark);
+  }
 }
 
 .input__error-message {

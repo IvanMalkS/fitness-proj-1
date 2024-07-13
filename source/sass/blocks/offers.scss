@@ -1,18 +1,32 @@
 .offers__container {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 61px;
+    padding-bottom: 60px;
+  }
 }
 
 .offers__title {
   @include indent-reset;
   @include custom-h3($primary-text-light);
-
   padding-bottom: 711.5px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 34px;
+  }
 }
 
 .offers__main {
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 278px 400px;
+    padding-bottom: 35px;
+  }
 }
 
 .offers__wrapper {
@@ -23,12 +37,40 @@
   bottom: 40px;
   left: -15px;
   right: -15px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    position: initial;
+    width: 400px;
+    min-width: 400px;
+    height: 462px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    min-width: 280px;
+    height: 460px;
+  }
 }
 
 .offers__image {
   display: block;
   min-width: 320px;
   height: 360px;
+  width: 320px;
+
+  @media (min-width: $tablet-width) {
+    width: 400px;
+    min-width: 400px;
+    height: 462px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 280px;
+    min-width: 280px;
+    height: 460px;
+  }
 }
 
 .offers__text {
@@ -43,6 +85,14 @@
   flex-direction: column;
   align-items: center;
   gap: 28px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    gap: 0;
+    align-items: flex-start;
+    position: initial;
+    padding: 40px 25px;
+  }
 }
 
 .offers__text * {
@@ -61,35 +111,50 @@
   bottom: 0;
   top: 0;
   z-index: auto;
+
+  @media (min-width: $tablet-width) {
+    content: none;
+  }
 }
 
 .offers__main-offer {
   @include indent-reset;
-
   text-align: center;
 }
 
 .offers__duration {
   display: block;
-
   @include custom-h4($primary-text-dark);
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
 }
 
 .offers__price {
   display: block;
-
   @include numbers-l($primary-text-dark);
-
   margin-top: 9px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    margin-top: 20px;
+  }
 }
 
 .offers__subscription {
   @include indent-reset;
   @include text-l($primary-text-dark);
-
   text-align: center;
   padding-left: 44px;
   padding-right: 44px;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    padding: 0;
+    padding-top: 40px;
+    padding-right: 40px;
+  }
 }
 
 .offers__price-currency {
@@ -99,4 +164,10 @@
 
 .offers__addition-list {
   @include indent-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .offers__about {
+    margin-top: auto;
+  }
 }

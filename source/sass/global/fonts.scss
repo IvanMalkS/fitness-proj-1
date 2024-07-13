@@ -1,2 +1,13 @@
-@include font-face("Alumni Sans", normal, url("../../fonts/alumni-sans/alumni-sans.woff2") format("woff2"), url("../../fonts/alumni-sans/alumni-sans.woff") format("woff"));
-@include font-face("Roboto Condensed", normal, url("../../fonts/roboto-condensed/roboto-condensed.woff2") format("woff2"), url("../../fonts/roboto-condensed/roboto-condensed.woff") format("woff"))
+@include font-face(
+  "Alumni Sans",
+  normal,
+  "../../fonts/alumni-sans/alumni-sans.woff2",
+  "../../fonts/alumni-sans/alumni-sans.woff"
+);
+
+@include font-face(
+  "Roboto Condensed",
+  normal,
+  "../../fonts/roboto-condensed/roboto-condensed.woff2",
+  "../../fonts/roboto-condensed/roboto-condensed.woff"
+);

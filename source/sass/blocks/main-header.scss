@@ -11,6 +11,11 @@
   justify-content: space-between;
   position: relative;
   align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .main-header__telephone {

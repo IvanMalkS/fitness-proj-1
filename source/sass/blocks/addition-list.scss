@@ -1,9 +1,13 @@
 .addition-list {
   @include list-reset;
-
   display: flex;
   flex-direction: column;
   gap: 30px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+  }
 }
 
 .addition-list__item {
@@ -16,16 +20,42 @@
   padding: 20px 30px;
   padding-top: 21px;
   padding-bottom: 19px;
+
+  @media (min-width: $tablet-width) {
+    gap: 0;
+    min-height: 188px;
+    padding: 21px;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 19px;
+    padding-left: 19.5px;
+  }
 }
 
 .addition-list__name {
   @include indent-reset;
-  @include custom-h4 ($primary-text-light);
+  @include custom-h4 ($seconadary-text-light-darker);
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    padding-bottom: 10px;
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 .addition-list__description {
   @include indent-reset;
-  @include text-m($primary-text-light);
-
+  @include text-m($seconadary-text-light-darker);
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .addition-list__about {
+    margin-top: auto;
+  }
 }

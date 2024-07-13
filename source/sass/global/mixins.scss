@@ -1,10 +1,75 @@
-@mixin font-face($font-family, $font-style, $font-src, $swap-src) {
+@mixin font-face($font-family, $font-style, $font-src-woff2, $font-src-woff) {
   @font-face {
     font-family: $font-family;
-    font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+    font-weight: 100;
     font-style: $font-style;
     font-display: swap;
-    src: $font-src, $swap-src;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 200;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 300;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 400;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 500;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 600;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 700;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 800;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
+  }
+  @font-face {
+    font-family: $font-family;
+    font-weight: 900;
+    font-style: $font-style;
+    font-display: swap;
+    src: url($font-src-woff2) format("woff2"),
+         url($font-src-woff) format("woff");
   }
 }
 
@@ -30,6 +95,18 @@
   text-align: right;
   letter-spacing: 1px;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 72px;
+    line-height: 85px;
+    letter-spacing: 1.8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 91px;
+    line-height: 110px;
+    letter-spacing: 4px;
+  }
 }
 
 // Mixin для заголовка h2
@@ -41,6 +118,16 @@
   line-height: 54px;
   text-align: center;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 48px;
+    line-height: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 82px;
+    line-height: 96px;
+  }
 }
 
 // Mixin для заголовка h3
@@ -50,6 +137,16 @@
   line-height: 32px;
   font-weight: 600;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+  }
 }
 
 // Mixin для заголовка h4
@@ -60,6 +157,16 @@
   font-weight: 700;
   text-align: center;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 26px;
+  }
 }
 
 // Mixin для заголовка h5
@@ -69,6 +176,16 @@
   line-height: 20px;
   font-weight: 400;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 // Mixin для заголовка h6
@@ -78,6 +195,16 @@
   line-height: 20px;
   font-weight: 400;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 22px;
+  }
 }
 
 // Текстовый контент
@@ -88,6 +215,11 @@
   line-height: 20px;
   font-weight: 300;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 // Mixin для текста размера medium
@@ -97,6 +229,11 @@
   line-height: 22px;
   font-weight: 300;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 // Mixin для текста размера small
@@ -106,6 +243,11 @@
   line-height: 20px;
   font-weight: 400;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 @mixin text-xs($text-color) {
@@ -122,6 +264,11 @@
   font-size: 80px;
   line-height: 120px;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 100px;
+    line-height: 150px;
+  }
 }
 
 @mixin numbers-l($text-color) {
@@ -130,6 +277,11 @@
   font-size: 64px;
   line-height: 64px;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 70px;
+    line-height: 70px;
+  }
 }
 
 @mixin numbers-m($text-color) {
@@ -138,6 +290,11 @@
   font-size: 48px;
   line-height: 64px;
   color: $text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 150px;
+  }
 }
 
 @mixin numbers($text-color) {

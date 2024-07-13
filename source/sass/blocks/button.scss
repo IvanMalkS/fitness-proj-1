@@ -31,24 +31,11 @@
   color: $primary-text-dark;
   padding-top: 22px;
   padding-bottom: 22px;
-}
 
-.button--tab {
-  font-family: $secondary-font;
-  color: $primary-text-light;
-  border: 1px solid $tab-border;
-  padding: 14px 22px;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
-  text-transform: none;
-}
-
-.button--tab-current {
-  background-color: $seconadary-blocks;
-  background-image: $tab-background;
-  color: $primary-text-dark;
-  padding: 14px 23px;
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .button--link-light {
