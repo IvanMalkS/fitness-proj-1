@@ -8,8 +8,10 @@ const initTabsSwitch = () => {
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
-      tabs.forEach((tab) => tab.classList.remove('faq__tab-button--current'))
-      tab.classList.add('faq__tab-button--current')
+      tabs.forEach((tabBtn) =>
+        tabBtn.classList.remove('faq__tab-button--current'),
+      );
+      tab.classList.add('faq__tab-button--current');
 
       const tabAccordionId = tab.getAttribute('data-tab');
       accordions.forEach((index) => {
@@ -19,9 +21,9 @@ const initTabsSwitch = () => {
           index.style.display = 'none';
         }
       });
-    })
-  })
-}
+    });
+  });
+};
 
 const initAccordion = () => {
   const accordionItems = document.querySelectorAll('.faq__item');
@@ -35,15 +37,18 @@ const initAccordion = () => {
     const content = accordionItem.querySelector('.faq__text');
 
     control.addEventListener('click', () => {
-      if (control.classList.contains('faq__control--plus')) {
-        control.classList.remove('faq__control--plus');
+      if (!control.classList.contains('faq__control--open')) {
+        control.classList.add('faq__control--open');
         content.classList.remove('faq__text--hidden');
+        control.querySelector('.visually-hidden').textContent = 'Скрыть текст';
       } else {
-        control.classList.add('faq__control--plus');
+        control.classList.remove('faq__control--open');
         content.classList.add('faq__text--hidden');
+        control.querySelector('.visually-hidden').textContent =
+          'Раскрыть текст';
       }
     });
-  })
-}
+  });
+};
 
 export { initTabsSwitch, initAccordion };

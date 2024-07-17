@@ -4,72 +4,89 @@
     font-weight: 100;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 200;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 300;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 400;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 500;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 600;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 700;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 800;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
+
   @font-face {
     font-family: $font-family;
     font-weight: 900;
     font-style: $font-style;
     font-display: swap;
-    src: url($font-src-woff2) format("woff2"),
-         url($font-src-woff) format("woff");
+    src:
+      url($font-src-woff2) format("woff2"),
+      url($font-src-woff) format("woff");
   }
 }
 
@@ -303,4 +320,9 @@
   font-size: 24px;
   line-height: 24px;
   color: $text-color;
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }

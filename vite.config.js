@@ -1,11 +1,11 @@
-import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-import VitePluginSvgSpritemap from '@spiriit/vite-plugin-svg-spritemap';
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import VitePluginSvgSpritemap from "@spiriit/vite-plugin-svg-spritemap";
 // import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 /** @type {import('vite').UserConfig} */
 export default {
   plugins: [
-    VitePluginSvgSpritemap('source/img/sprite/*.svg', {
+    VitePluginSvgSpritemap("source/img/sprite/*.svg", {
       styles: false,
       injectSVGOnDev: true,
     }),
@@ -20,7 +20,7 @@ export default {
         multipass: true,
         plugins: [
           {
-            name: 'preset-default',
+            name: "preset-default",
             params: {
               overrides: {
                 cleanupNumericValues: false,
@@ -34,39 +34,39 @@ export default {
               },
             },
           },
-          'removeDimensions',
+          "removeDimensions",
         ],
       },
       png: {
         // https://sharp.pixelplumbing.com/api-output#png
         quality: 80,
-        palette: true
+        palette: true,
       },
       jpeg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
         quality: 80,
-        progressive: true
+        progressive: true,
       },
       jpg: {
         // https://sharp.pixelplumbing.com/api-output#jpeg
         quality: 80,
-        progressive: true
+        progressive: true,
       },
       // Cache assets in cacheLocation. When enabled, reads and writes asset files with their hash suffix from the specified path.
       cache: true,
-      cacheLocation: './.cache',
+      cacheLocation: "./.cache",
     }),
   ],
   css: {
-    devSourcemap: true
+    devSourcemap: true,
   },
-  publicDir: 'public',
-  root: './source',
+  publicDir: "public",
+  root: "./source",
   build: {
-    outDir: '../dist',
+    outDir: "../dist",
   },
-  base: './',
+  base: "./",
   server: {
     port: 3000,
-  }
+  },
 };

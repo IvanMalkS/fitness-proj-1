@@ -11,6 +11,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 @media (max-width: $mobile-width-only) {
@@ -24,6 +25,34 @@
   color: $primary-text-light;
   padding-top: 22px;
   padding-bottom: 22px;
+
+  &:hover {
+    background: $default-play-bg;
+    color: $primary-text-dark;
+    border: none;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  &:focus {
+    background: $primary-focus;
+    color: $primary-text-dark;
+    border: 2px solid $primary-border-light;
+  }
+
+  &:active {
+    background: $default-play-bg;
+    color: $primary-text-dark;
+    opacity: 0.7;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
 }
 
 .button--primary-dark {
@@ -32,9 +61,62 @@
   padding-top: 22px;
   padding-bottom: 22px;
 
+  &:hover {
+    background-color: $primary-background;
+    color: $secondary-text-light;
+    border: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &:focus {
+    background-color: $focus-primary-background-light;
+    color: $secondary-text-light;
+    outline: none;
+    border: 2px solid $primary-border-dark;
+  }
+
+  &:active {
+    background-color: $primary-background;
+    color: $primary-text-light;
+    border: none;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 20px;
     padding-bottom: 20px;
+
+    &:hover {
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+
+    &:active {
+      padding-top: 22px;
+      padding-bottom: 22px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    &:hover {
+      padding-top: 27px;
+      padding-bottom: 27px;
+    }
+
+    &:active {
+      padding-top: 27px;
+      padding-bottom: 22px;
+    }
   }
 }
 

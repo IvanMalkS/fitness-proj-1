@@ -15,6 +15,14 @@
     align-items: center;
     gap: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 30px;
+    gap: 56px;
+    padding-left: 250px;
+    padding-right: 175px;
+    padding-bottom: 119px;
+  }
 }
 
 .hero__text-content {
@@ -27,16 +35,29 @@
   @media (min-width: $tablet-width) {
     gap: 0 26px;
   }
+
+  @media (min-width: $desktop-width) {
+    gap: 39px 0;
+    align-items: center;
+  }
 }
 
 .hero__subtitle {
   grid-row: 1/3;
+
   @include indent-reset;
   @include text-s($primary-text-dark);
+
   margin-top: auto;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 23px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include indent-reset;
+
+    grid-row: 1/4;
   }
 }
 
@@ -48,10 +69,15 @@
 .hero__city {
   @include indent-reset;
   @include custom-h3($primary-text-dark);
+
   padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include indent-reset;
   }
 }
 
@@ -68,6 +94,13 @@
     grid-column: 2 / 3;
     margin-top: 50px;
     max-width: 186px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    min-width: 270px;
+    max-width: 280px;
+    padding: 25px 56px;
   }
 }
 

@@ -1,6 +1,5 @@
-import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
-
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 
 const SWIPER_CONFIG = {
   speed: 400,
@@ -24,21 +23,22 @@ const SWIPER_CONFIG = {
     },
     1366: {
       slidesPerView: 4,
-      spaceBetween: 40
-    }
-  }
-}
+      spaceBetween: 40,
+      width: 100,
+    },
+  },
+};
 
 const initJuriSwiper = () => {
   const swiperElement = document.querySelector('.juri__swiper');
   const swiperWrapperElement = document.querySelector('.juri__list');
-  const swiperSlider = document.querySelectorAll('.juri__human')
+  const swiperSlider = document.querySelectorAll('.juri__human');
 
   if (!swiperElement || !swiperWrapperElement || !swiperSlider) {
     return;
   }
 
-  const swiper = new Swiper('.juri__swiper', SWIPER_CONFIG);
-}
+  new Swiper('.juri__swiper', SWIPER_CONFIG);
+};
 
 export default initJuriSwiper;

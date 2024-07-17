@@ -1,5 +1,31 @@
 .price {
   background-color: $secondary-background;
+
+
+  @media (min-width: $tablet-width) {
+    background-size: 383px 423px;
+    background-repeat: no-repeat;
+    background-image:
+      image-set(
+        "/img/weight-plates/weight-plates-tablet@1x.webp" 1x,
+        "/img/weight-plates/weight-plates-tablet@2x.webp" 2x,
+        "/img/weight-plates/weight-plates-tablet@1x.png" 1x,
+        "/img/weight-plates/weight-plates-tablet@2x.png" 2x
+      );
+    background-position: calc(100% - -68.26px) calc(100% - -36px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: calc(100% - -168.26px) calc(100% - -46px);
+    background-size: 470px 493px;
+    background-image:
+      image-set(
+        "/img/weight-plates/weight-plates-desktop@1x.webp" 1x,
+        "/img/weight-plates/weight-plates-desktop@2x.webp" 2x,
+        "/img/weight-plates/weight-plates-desktop@1x.png" 1x,
+        "/img/weight-plates/weight-plates-desktop@2x.png" 2x
+      );
+  }
 }
 
 .price__container {
@@ -13,34 +39,49 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 102px;
   }
 }
 
 .price__title {
   @include indent-reset;
   @include custom-h3($primary-text-light);
+
   padding-bottom: 25px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 33px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .price__filters {
   @include list-reset;
+
   display: flex;
   justify-content: space-between;
   position: relative;
   margin-bottom: 30px;
-
 
   @media (min-width: $tablet-width) {
     max-width: 310px;
     gap: 43px;
     flex-wrap: wrap;
     margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 350px;
+    gap: 50.5px;
+    margin-bottom: 40px;
   }
 }
 
@@ -62,6 +103,21 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 1px;
   }
+
+  &:hover {
+    color: $text-tab-hover;
+    border-bottom: 2px solid $hover-tab-border;
+  }
+
+  &:focus-within {
+    outline: none;
+    border-bottom: 2px solid $focus-tab-border;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
 }
 
 .price__filter--current {
@@ -79,5 +135,14 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &:focus {
+    outline: none;
   }
 }

@@ -10,9 +10,12 @@ module.exports = {
     "tel-non-breaking": "off",
     "no-style-tag": "error",
     "no-unknown-elements": "error",
-    "heading-level": ["error", {
-      "allowMultipleH1": false,
-      "minInitialRank": "h1",
-    }]
+    "heading-level": [
+      "error",
+      {
+        allowMultipleH1: false,
+        minInitialRank: "h1",
+      },
+    ],
   },
 };

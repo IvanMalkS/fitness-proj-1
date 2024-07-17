@@ -1,5 +1,6 @@
 .addition-list {
   @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -7,6 +8,12 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 324px);
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
 }
 
@@ -30,11 +37,16 @@
     padding-bottom: 19px;
     padding-left: 19.5px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 174px;
+    padding-top: 20px;
+  }
 }
 
 .addition-list__name {
   @include indent-reset;
-  @include custom-h4 ($seconadary-text-light-darker);
+  @include custom-h4($seconadary-text-light-darker);
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -44,9 +56,23 @@
   }
 }
 
+.addition-list__br--mobile {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    content: "";
+  }
+}
+
+.addition-list__br--tabler {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
 .addition-list__description {
   @include indent-reset;
   @include text-m($seconadary-text-light-darker);
+
   text-align: center;
 
   @media (min-width: $tablet-width) {

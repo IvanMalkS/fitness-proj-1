@@ -9,5 +9,5 @@ module.exports = async function (page, scenario) {
     }
   };
   await page.setRequestInterception(true);
-  page.on('request', intercept);
+  page.on("request", intercept);
 };

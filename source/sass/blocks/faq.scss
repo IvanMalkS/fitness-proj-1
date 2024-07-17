@@ -2,12 +2,30 @@
   background-color: $secondary-background;
 }
 
-.faq__text-mobile-br {
+.faq__br {
   display: none;
 }
 
 @media (max-width: $mobile-width-only) {
-  .faq__text-mobile-br {
+  .faq__br--mobile {
+    content: "";
+    display: block;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .faq__br--tablet {
+    content: "";
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .faq__br--tablet {
+    display: none;
+  }
+
+  .faq__br--desktop {
     content: "";
     display: block;
   }
@@ -21,21 +39,37 @@
     padding-top: 61px;
     padding-bottom: 61px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 0 40px;
+  }
 }
 
 .faq__title {
   @include indent-reset;
   @include custom-h3($primary-text-light);
+
   padding-bottom: 35px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 44px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    grid-column: 1 / 3;
+    padding-bottom: 50px;
+  }
 }
 
 .faq__tabs {
   @include list-reset;
+
   display: grid;
   grid-template-columns: repeat(2, 140px);
   gap: 10px;
@@ -45,10 +79,16 @@
     grid-template-columns: repeat(4, 162px);
     padding-bottom: 45px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .faq__accordion {
   @include list-reset;
+
   display: flex;
   flex-direction: column;
 }
@@ -65,6 +105,12 @@
   @media (min-width: $tablet-width) {
     padding-top: 24px;
     padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -1px;
+    padding-top: 23px;
+    padding-bottom: 23px;
   }
 }
 
@@ -93,30 +139,38 @@
   width: 30px;
   height: 30px;
   display: block;
-  background-color: $accordion-control-primary;
+  background: none;
   border-radius: 50%;
   transition: all ease 0.5ms;
+  border: 1px solid $accordion-control-primary;
 
   @media (min-width: $tablet-width) {
     width: 40px;
     height: 40px;
   }
+
+  &:hover {
+    background-color: $accordion-control-primary;
+  }
+
+  &:focus {
+    background-color: $secondary-border-light;
+  }
 }
 
-.faq__control--plus {
-  border: 1px solid $accordion-control-primary;
-  background: none;
+.faq__control--open {
+  background-color: $accordion-control-primary;
 }
 
 .faq__control::before {
   content: "";
   position: absolute;
-  mask-image: url("/__spritemap#sprite-minus-view");
+  mask-image: url("/__spritemap#sprite-plus-view");
   width: 14px;
   height: 14px;
   mask-repeat: no-repeat;
   mask-size: 14px 14px;
-  background-color: $primary-text-dark;
+  background-color: $accordion-control-primary;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -128,9 +182,9 @@
   }
 }
 
-.faq__control--plus::before {
-  mask-image: url("/__spritemap#sprite-plus-view");
-  background-color: $accordion-control-primary;
+.faq__control--open::before {
+  mask-image: url("/__spritemap#sprite-minus-view");
+  background-color: $primary-text-dark;
 }
 
 .faq__name {
@@ -141,6 +195,7 @@
 .faq__text {
   @include indent-reset;
   @include text-l($primary-text-light);
+
   padding-top: 20px;
   transition: max-height 0.3s ease-out, padding 0.3s ease-out;
   overflow: hidden;
@@ -149,6 +204,11 @@
   @media (min-width: $tablet-width) {
     max-width: 558px;
     padding-top: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 23px;
+    max-width: 603px;
   }
 }
 
@@ -168,11 +228,26 @@
   text-transform: none;
   width: 100%;
 
+  &:hover,
+  &:focus {
+    border: 1px solid $primary-border-light;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    border:  1px solid $tab-border;
+    color: $primary-disabled;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 18px;
     padding: 17px 28px;
     min-height: 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 28px 14px;
   }
 }
 
@@ -184,5 +259,9 @@
 
   @media (min-width: $tablet-width) {
     padding: 17px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 18px 28px 14px;
   }
 }

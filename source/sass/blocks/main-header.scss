@@ -16,13 +16,36 @@
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 31px;
+    padding-bottom: 30px;
+  }
 }
 
 .main-header__telephone {
   display: block;
-
   @include indent-reset;
   @include custom-h4($primary-text-dark);
-
   text-decoration: none;
+  outline: none;
+
+  &:hover {
+    color: $seconadary-text-light-darker;
+    opacity: 0.5;
+  }
+
+  &:focus {
+    color: $seconadary-text-light-darker;
+  }
+
+  &:active {
+    color: $seconadary-text-light-darker;
+    border-bottom: 1px solid $seconadary-text-light-darker;
+  }
+
+  &--disabled {
+    color: $primary-text-darker;
+    opacity: 0.5;
+  }
 }

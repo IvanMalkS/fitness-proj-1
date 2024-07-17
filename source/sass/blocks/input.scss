@@ -1,6 +1,13 @@
+.input {
+  @media (min-width: $desktop-width) {
+    height: 26px;
+  }
+}
+
 .input__control {
-  @include indent-reset();
+  @include indent-reset;
   @include text-m($primary-text-dark);
+  outline: none;
   min-width: 100px;
   padding-bottom: 4px;
   background-color: transparent;
@@ -29,21 +36,33 @@
   @media (min-width: $tablet-width) {
     @include text-s($primary-text-dark);
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 2px;
+  }
 }
 
 .input__control::placeholder {
   @include text-m(inherit);
+
   opacity: 0.4;
   font-weight: 300;
 
   @media (min-width: $tablet-width) {
     @include text-s($primary-text-dark);
   }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 .input__error-message {
-  @include indent-reset();
+  @include indent-reset;
   @include text-s($error-form-color);
+
   margin-top: 2px;
   display: none;
 }

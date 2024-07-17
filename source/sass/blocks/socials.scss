@@ -1,5 +1,6 @@
 .socials {
-  @include list-reset();
+  @include list-reset;
+
   display: flex;
   gap: 20px;
   max-width: 120px;
@@ -9,6 +10,12 @@
     min-width: 105px;
     gap: 15px;
     max-width: 106px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 10px;
+    min-width: 95px;
+    max-width: 100px;
   }
 }
 
@@ -37,12 +44,15 @@
 
 .socials__link--vk::before {
   mask-image: url("/__spritemap#sprite-vk-view");
+  mask-size: 12px 13px;
 }
 
 .socials__link--ok::before {
   mask-image: url("/__spritemap#sprite-ok-view");
+  mask-size: 17px 16px;
 }
 
 .socials__link--reddit::before {
   mask-image: url("/__spritemap#sprite-reddit-view");
+  mask-size: 14px 14px;
 }

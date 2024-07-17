@@ -11,26 +11,44 @@
     padding-top: 60px;
     padding-bottom: 35px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 355px 660px;
+    padding-top: 120px;
+    gap: 0 145px;
+  }
 }
 
 .about__title {
   @include indent-reset;
   @include custom-h3($primary-text-light);
+
   padding-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-bottom: 26px;
   }
 }
 
 .about__subtitle {
   @include indent-reset;
   @include custom-h6($primary-text-light);
+
   padding-bottom: 37px;
   display: block;
 
   @media (min-width: $tablet-width) {
     padding-bottom: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 95px;
   }
 }
 
@@ -42,10 +60,43 @@
     padding-left: 92px;
     padding-right: 92px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding: 0;
+  }
+}
+
+.about__addition {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    padding-top: 8px;
+    padding-right: 31px;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
   .about__text-br {
+    display: block;
+    width: 100%;
+  }
+}
+
+.about__text-br--tablet {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about__text-br--tablet {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about__text-br--desktop {
     display: block;
     width: 100%;
   }
@@ -60,6 +111,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+    padding-bottom: 208px;
   }
 }
 
@@ -76,6 +132,15 @@
     width: 678px;
     bottom: 120px;
   }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    left: 0;
+    transform: none;
+    bottom: 0;
+    width: 660px;
+    height: 400px;
+  }
 }
 
 .about__video {
@@ -91,10 +156,24 @@
     height: 170px;
     bottom: 35px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    height: 230px;
+    bottom: 0;
+    top: 405px;
+  }
+}
+
+.about__video-iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .about__play {
-  @include indent-reset();
+  @include indent-reset;
+
   position: absolute;
   width: 72px;
   height: 72px;
@@ -115,6 +194,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media (min-width: $desktop-width) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .about__play-icon::after {
@@ -145,4 +229,90 @@
   background-size: cover;
   background-image: $default-play-bg;
 
+  @media (min-width: $desktop-width) {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+.about__play:hover::before {
+  background-image: none;
+}
+
+.about__play-icon:hover {
+  border: 2px solid $hover-play;
+}
+
+.about__play-icon:hover::before {
+  background-image: none;
+  background-color: $hover-play-bg;
+}
+
+.about__play-icon:hover::after {
+  background-color: $hover-play;
+}
+
+
+.about__play:focus::before {
+  background-image: none;
+}
+
+.about__play:focus {
+  outline: none;
+
+  .about__play-icon {
+    border: 2px solid $focus-play;
+  }
+
+  .about__play-icon::before {
+    background-image: none;
+    background-color: $focus-play-bg;
+  }
+
+  .about__play-icon::after {
+    background-color: $focus-play;
+  }
+}
+
+.about__play:active {
+  &::before {
+    background-image: none;
+    width: 58px;
+    height: 58px;
+  }
+
+  .about__play-icon {
+    border: 2px solid $active-play;
+  }
+
+  .about__play-icon::before {
+    background-image: none;
+    background-color: $active-play-bg;
+  }
+
+  .about__play-icon::after {
+    background-color: $active-play;
+  }
+}
+
+.about__play:disabled {
+  opacity: 0.4;
+  pointer-events: none;
+
+  &::before {
+    background-image: none;
+  }
+
+  .about__play-icon {
+    border: 2px solid $disabled-play;
+  }
+
+  .about__play-icon::before {
+    background-image: none;
+    background-color: $disabler-play-bg;
+  }
+
+  .about__play-icon::after {
+    background-color: $disabled-play;
+  }
 }

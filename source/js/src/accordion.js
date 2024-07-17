@@ -4,10 +4,10 @@ accordion.forEach((accordionItem) => {
   const control = accordionItem.querySelector('.faq__control');
 
   control.addEventListener('click', () => {
-    if (control.classList.contains('faq__control--plus')) {
-      control.classList.remove('faq__control--plus');
+    if (control.classList.contains('')) {
+      control.classList.remove('');
     } else {
-      control.classList.add('faq__control--plus');
+      control.classList.add('');
     }
   });
-})
+});

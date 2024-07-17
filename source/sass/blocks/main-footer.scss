@@ -16,10 +16,17 @@
     gap: 36px;
     min-width: 396px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 41px;
+    padding-bottom: 39px;
+    justify-content: space-between;
+  }
 }
 
 .main-footer__nav-list {
-  @include list-reset();
+  @include list-reset;
+
   display: flex;
   max-width: 290px;
   gap: 20px 35px;
@@ -32,6 +39,12 @@
     max-width: 463px;
     margin-top: 1px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-width: 598px;
+    max-width: 600px;
+    margin-top: 1px;
+  }
 }
 
 .main-footer__nav-item {
@@ -39,7 +52,8 @@
 }
 
 .main-footer__nav-link {
-  @include indent-reset();
+  @include indent-reset;
   @include text-s($primary-text-dark);
+
   text-decoration: none;
 }

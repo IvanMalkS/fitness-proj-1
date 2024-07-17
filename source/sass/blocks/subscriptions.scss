@@ -1,5 +1,6 @@
 .subscriptions {
   @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 35px;
@@ -8,30 +9,16 @@
     gap: 40px;
     position: relative;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .subscriptions::before {
-    content: "";
-    width: 336px;
-    height: 353px;
-    position: absolute;
-    display: block;
-    transform: rotate(0deg);
-    bottom: -25.74px;
-    right: -217px;
-    background-size: 383px 423px;
-    background-image: image-set(
-      "/img/weight-plates/weight-plates-tablet@1x.webp" 1x,
-      "/img/weight-plates/weight-plates-tablet@2x.webp" 2x,
-      "/img/weight-plates/weight-plates-tablet@1x.png" 1x,
-      "/img/weight-plates/weight-plates-tablet@2x.png" 2x,
-    );
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 40px;
   }
 }
 
 
-.subsciptions__cart {
+.subscriptions__cart {
   padding: 50px 42px;
   display: flex;
   flex-direction: column;
@@ -46,6 +33,12 @@
     position: relative;
     z-index: 1;
   }
+
+  @media (min-width: $desktop-width) {
+    min-width: 360px;
+    min-height: 447px;
+    gap: 17px;
+  }
 }
 
 .subscriptions__name {
@@ -54,6 +47,10 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -64,6 +61,10 @@
   @media (min-width: $tablet-width) {
     padding-bottom: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .subscriptions__prices {
@@ -71,6 +72,10 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -81,6 +86,7 @@
 
 .subscriptions__price-currency {
   @include indent-reset;
+
   background-image: url("/__spritemap#sprite-rub-view");
   background-size: 24px 33px;
   width: 24px;
@@ -95,6 +101,7 @@
 
 .subscriptions__price-value--bg-shadow {
   @include numbers-xl($text-shadow);
+
   position: relative;
 }
 
@@ -111,9 +118,42 @@
     gap: 13px;
     bottom: -8px;
   }
+
+  @media (min-width: $desktop-width) {
+    bottom: -30px;
+    gap: 14px;
+  }
 }
 
 .subscriptions__buy {
   padding-top: 25px;
   padding-bottom: 25px;
+
+  &:hover {
+    background: $default-play-bg;
+    color: $primary-text-dark;
+    border: none;
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+
+  &:focus {
+    background: $primary-focus;
+    color: $primary-text-dark;
+    border: 2px solid $primary-border-light;
+  }
+
+  &:active {
+    background: $default-play-bg;
+    color: $primary-text-dark;
+    opacity: 0.7;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    border: none;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
 }

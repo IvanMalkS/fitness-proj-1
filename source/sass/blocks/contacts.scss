@@ -2,6 +2,7 @@
   padding-top: 37px;
   padding-bottom: 40px;
   color: $primary-text-light;
+  background-color: $primary-text-dark;
 
   @media (min-width: $tablet-width) {
     max-width: 440px;
@@ -9,11 +10,29 @@
     padding-top: 60px;
     padding-bottom: 58px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 59.6px 103px 60px;
+    min-width: 683px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: $secondary-border-light;
+    width: calc(50% + 103px);
+    height: 1px;
+    right: 0;
+  }
 }
 
 .contacts__title {
-  @include indent-reset();
+  @include indent-reset;
   @include custom-h3($primary-text-light);
+
   padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
@@ -21,10 +40,16 @@
     line-height: 54px;
     text-align: center;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    padding-bottom: 36px;
+  }
 }
 
 .contacts__list {
-  @include list-reset();
+  @include list-reset;
+
   display: flex;
   flex-direction: column;
   gap: 28px;
@@ -33,10 +58,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "address phone"
-    "hours email";
+      "address phone"
+      "hours   email";
     gap: 14px 60px;
     position: relative;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 14px 120px;
   }
 }
 
@@ -45,7 +74,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 50%;
     width: 1px;
     height: 100%;
@@ -71,6 +100,7 @@
 
 .contacts__name {
   @include custom-h5($primary-text-light);
+
   display: block;
   padding-bottom: 12px;
 
@@ -79,10 +109,15 @@
     line-height: 24px;
     padding-bottom: 6px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 6px;
+  }
 }
 
 .contacts__text {
   @include text-s($primary-text-light);
+
   display: block;
   text-decoration: none;
 }

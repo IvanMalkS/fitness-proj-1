@@ -1,0 +1,12 @@
+.form {
+  position: relative;
+}
+
+@media (min-width: $desktop-width) {
+  .form__container {
+    padding-left: 0;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 683px);
+  }
+}

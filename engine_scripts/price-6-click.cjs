@@ -1,10 +1,10 @@
 module.exports = async (page, scenario, vp) => {
-  console.log('SCENARIO > ' + scenario.label);
+  console.log("SCENARIO > " + scenario.label);
 
   // add more ready handlers here...
   await page.waitForFunction(() => {
     return document.fonts.ready.then(() => {
-      console.log('Fonts loaded');
+      console.log("Fonts loaded");
       return true;
     });
   });
@@ -13,25 +13,28 @@ module.exports = async (page, scenario, vp) => {
     /** force load lazy images */
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     lazyImages.forEach((i) => {
-      i.removeAttribute('loading');
+      i.removeAttribute("loading");
     });
   }, scenario);
 
   const getByText = async ($container, text) => {
-    const [$el] = await $container.$$(`xpath/.//*[text()='${text}']`)
-    return $el ? [$el] : $container.$$(`xpath/.//*[contains(text(), '${text}')]`)
-  }
+    const [$el] = await $container.$$(`xpath/.//*[text()='${text}']`);
+    return $el
+      ? [$el]
+      : $container.$$(`xpath/.//*[contains(text(), '${text}')]`);
+  };
 
   const container = await page.$(`[data-test="price"]`);
-  let [$el] = await getByText(container, '6 месяцев');
+  let [$el] = await getByText(container, "6 месяцев");
   if (!$el) {
-    ([$el] = await getByText(container, '6 месяцев'))
+    [$el] = await getByText(container, "6 месяцев");
   }
   if (!$el) {
-    throw new Error(`Element with text "6 месяцев" not found in "price" container`);
+    throw new Error(
+      `Element with text "6 месяцев" not found in "price" container`,
+    );
   }
   await $el.click();
 
   await page.waitForTimeout(scenario.delay || 0);
-
 };

@@ -2,9 +2,13 @@ const form = document.querySelector('.feedback__form');
 
 const initFormValidation = () => {
   if (form) {
-    form.addEventListener('submit', function(event) {
-      const nameInput = event.target.querySelector('.input__control[name="name"]');
-      const phoneInput = event.target.querySelector('.input__control[name="phone"]');
+    form.addEventListener('submit', (event) => {
+      const nameInput = event.target.querySelector(
+        '.input__control[name="name"]',
+      );
+      const phoneInput = event.target.querySelector(
+        '.input__control[name="phone"]',
+      );
       const nameError = document.getElementById('name-error');
       const phoneError = document.getElementById('phone-error');
 
@@ -36,6 +40,6 @@ const initFormValidation = () => {
       }
     });
   }
-}
+};
 
 export default initFormValidation;
