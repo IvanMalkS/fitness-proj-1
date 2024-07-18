@@ -182,6 +182,10 @@
   }
 }
 
+.faq__control:hover::before {
+  background-color: $primary-border-dark;
+}
+
 .faq__control--open::before {
   mask-image: url("/__spritemap#sprite-minus-view");
   background-color: $primary-text-dark;

@@ -9,7 +9,6 @@ $secondary-text-light: #103aae;
 $text-shadow: rgba(232, 232, 232, 0.5);
 $text-ultra-light: rgba(16, 38, 84, 0.5);
 $text-button-secondary: #1c3374;
-$seconadary-text-light-darker: #1c3374;
 $primary-text-darker: #f8f9fc;
 
 // text gradient
@@ -31,6 +30,9 @@ $primary-focus: linear-gradient(
   rgba(237, 2, 51, 0.8) 17.6%,
   rgba(0, 62, 183, 0.8) 95.31%
 );
+$disabled-button-dark:#030a1a;
+$disabled-button-light: rgba(16, 38, 84, 0.3);
+$border-light: #000000;
 
 // backgrounds colors
 $primary-background: #ffffff;
@@ -51,6 +53,7 @@ $focus-primary-background-light: rgba(255, 255, 255, 0.8);
 
 // shadows
 $seconadary-blocks-shadow: rgba(28, 51, 116, 0.2);
+$price-slider-shadow: #e8e8e8;
 
 // icons color
 $primary-icon-light: #102654;

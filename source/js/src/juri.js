@@ -15,16 +15,17 @@ const SWIPER_CONFIG = {
     320: {
       slidesPerView: 1,
       spaceBetween: 100,
+      centeredSlides: true,
     },
     768: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-      width: 560,
+      slidesPerView: "auto",
+      spaceBetween: 28,
+      width: 260,
     },
     1366: {
-      slidesPerView: 4,
-      spaceBetween: 40,
-      width: 100,
+      slidesPerView: "auto",
+      spaceBetween: 28,
+      width: 260,
     },
   },
 };

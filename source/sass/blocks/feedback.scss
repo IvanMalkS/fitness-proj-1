@@ -16,7 +16,7 @@
     padding-top: 60px;
     padding-bottom: 60px;
     padding-left: 103px;
-    max-width: 466px;
+    max-width: 580px;
     margin: 0;
   }
 }
@@ -90,6 +90,29 @@
   border: 2px solid $primary-border-dark;
   font-weight: 700;
 
+  &:hover {
+    border: 2px solid $primary-border-dark;
+    background-color: $primary-border-dark;
+    color: $secondary-text-light;
+  }
+
+  &:focus {
+    color: $secondary-text-light;
+    outline: none;
+    background-color: $focus-primary-background-light;
+    border: 2px solid $border-light;
+  }
+
+  &:active {
+    border: 2px solid $primary-border-dark;
+    color: $primary-text-light;
+    background-color: $primary-border-dark;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
   @media (min-width: $tablet-width) {
     text-align: center;
     grid-column: 1 / 3;
@@ -103,7 +126,7 @@
     height: 66px;
     font-size: 12px;
     line-height: 12px;
-    width: 477px;
+    max-width: 477px;
   }
 }
 

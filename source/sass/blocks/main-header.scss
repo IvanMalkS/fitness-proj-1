@@ -31,17 +31,17 @@
   outline: none;
 
   &:hover {
-    color: $seconadary-text-light-darker;
+    color: $text-button-secondary;
     opacity: 0.5;
   }
 
   &:focus {
-    color: $seconadary-text-light-darker;
+    color: $text-button-secondary;
   }
 
   &:active {
-    color: $seconadary-text-light-darker;
-    border-bottom: 1px solid $seconadary-text-light-darker;
+    color: $text-button-secondary;
+    border-bottom: 1px solid $text-button-secondary;
   }
 
   &--disabled {

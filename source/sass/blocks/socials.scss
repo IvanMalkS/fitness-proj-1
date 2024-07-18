@@ -26,6 +26,41 @@
   display: block;
   width: 25px;
   height: 25px;
+
+  &:hover {
+    background-color: $secondary-border-light;
+  }
+
+  &:hover::before {
+    background-color: $primary-border-dark;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $secondary-text-light;
+  }
+
+  &:focus::before {
+    background-color: $primary-border-dark;
+  }
+
+  &:active {
+    outline: none;
+    background-color: $primary-text-light;
+  }
+
+  &:active::before {
+    background-color: $primary-border-dark;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: $primary-border-dark;
+  }
+
+  &--disabled::before {
+    background-color: $disabled-button-dark;
+  }
 }
 
 .socials__link::before {

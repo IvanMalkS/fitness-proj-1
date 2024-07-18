@@ -10,19 +10,19 @@ const SWIPER_CONFIG = {
     prevEl: '.swiper-button-prev',
     lockClass: 'disabled',
   },
+  centeredSlides: true,
+  slidesPerView: "auto",
   breakpoints: {
     320: {
-      slidesPerView: 1,
       spaceBetween: 100,
+      with: 240,
     },
     768: {
-      slidesPerView: 1,
-      spaceBetween: 116,
+      spaceBetween: 700,
       width: 500,
     },
     1366: {
-      slidesPerView: 1,
-      spaceBetween: 100,
+      spaceBetween: 800,
       width: 560,
     },
   },

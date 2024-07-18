@@ -46,7 +46,7 @@
 
 .addition-list__name {
   @include indent-reset;
-  @include custom-h4($seconadary-text-light-darker);
+  @include custom-h4($text-button-secondary);
 
   @media (min-width: $tablet-width) {
     text-align: left;
@@ -71,7 +71,7 @@
 
 .addition-list__description {
   @include indent-reset;
-  @include text-m($seconadary-text-light-darker);
+  @include text-m($text-button-secondary);
 
   text-align: center;
 
