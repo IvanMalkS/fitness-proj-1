@@ -7,6 +7,7 @@
 .input__control {
   @include indent-reset;
   @include text-m($primary-text-dark);
+
   outline: none;
   min-width: 100px;
   padding-bottom: 4px;

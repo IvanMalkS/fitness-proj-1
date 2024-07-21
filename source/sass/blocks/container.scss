@@ -5,6 +5,10 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  @media (max-width: $mobile-width-only) {
+    width: $mobile-width;
+  }
+
   @media (min-width: $tablet-width) {
     padding-left: 45px;
     padding-right: 45px;

@@ -208,12 +208,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 22px;
-  height: 22px;
+  width: 12px;
+  height: 12px;
   background-color: $default-play-fill;
-  mask-size: cover;
+  mask-size: 12px 12px;
   mask-repeat: no-repeat;
   mask-image: url("/__spritemap#sprite-play-view");
+
+  @media (min-width: $desktop-width) {
+    width: 17px;
+    height: 17px;
+    mask-size: 17px 17px;
+  }
 }
 
 .about__play::before {
@@ -277,8 +283,11 @@
 .about__play:active {
   &::before {
     background-image: none;
-    width: 58px;
-    height: 58px;
+
+    @media (min-width: $desktop-width) {
+      width: 58px;
+      height: 58px;
+    }
   }
 
   .about__play-icon {

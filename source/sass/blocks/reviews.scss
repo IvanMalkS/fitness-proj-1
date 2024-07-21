@@ -21,6 +21,7 @@
 .reviews__title {
   @include indent-reset;
   @include custom-h3($primary-text-light);
+
   text-align: center;
   padding-bottom: 40px;
 
@@ -37,6 +38,7 @@
 
 .reviews__list {
   @include list-reset;
+
   display: flex;
 
   @media (min-width: $tablet-width) {

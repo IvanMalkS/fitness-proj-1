@@ -193,13 +193,6 @@
     padding-top: 25px;
     padding-bottom: 25px;
     margin-top: -1px;
-
-    &:hover,
-    &:active {
-      padding-top: 27px;
-      padding-bottom: 27px;
-      border: none;
-    }
   }
 
   @media (min-width: $desktop-width) {

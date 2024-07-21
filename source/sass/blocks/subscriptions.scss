@@ -26,18 +26,36 @@
   background-color: $primary-background;
   text-align: center;
 
+  &:hover,
+  &:focus {
+    border: 7px solid;
+    border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+    border-image-slice: 1;
+    padding: 43px 35px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 65px;
     min-width: 380px;
     gap: 0;
     position: relative;
     z-index: 1;
+
+    &:hover,
+    &:focus {
+      padding: 58px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     min-width: 360px;
     min-height: 447px;
     gap: 17px;
+
+    &:hover,
+    &:focus {
+      min-height: 448px;
+    }
   }
 }
 
@@ -130,11 +148,6 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
-  &:hover {
-    background: $default-play-bg;
-    color: $primary-text-dark;
-    border: 2px solid  $default-play-bg;
-  }
 
   &:focus {
     background: $primary-focus;
@@ -142,12 +155,6 @@
     border: 2px solid $primary-border-light;
   }
 
-  &:active {
-    background: $default-play-bg;
-    color: $primary-text-dark;
-    opacity: 0.7;
-    border: 2px solid $default-play-bg;
-  }
 
   &:disabled {
     pointer-events: none;

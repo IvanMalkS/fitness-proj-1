@@ -18,14 +18,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-top: 41px;
-    padding-bottom: 39px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     justify-content: space-between;
   }
 }
 
 .main-footer__nav-list {
   @include list-reset;
+
   display: flex;
   max-width: 290px;
   gap: 20px 35px;
@@ -42,7 +43,7 @@
   @media (min-width: $desktop-width) {
     min-width: 598px;
     max-width: 600px;
-    margin-top: 1px;
+    margin-top: 2px;
   }
 }
 
@@ -53,6 +54,7 @@
 .main-footer__nav-link {
   @include indent-reset;
   @include text-s($primary-text-dark);
+
   text-decoration: none;
   position: relative;
 }
@@ -62,7 +64,7 @@
   content: "";
   bottom: -5px;
   height: 1px;
-  left: 0px;
+  left: 0;
   width: 100%;
   background-color: $hover-play-bg;
 }

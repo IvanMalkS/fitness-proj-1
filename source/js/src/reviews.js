@@ -11,7 +11,7 @@ const SWIPER_CONFIG = {
     lockClass: 'disabled',
   },
   centeredSlides: true,
-  slidesPerView: "auto",
+  slidesPerView: 'auto',
   breakpoints: {
     320: {
       spaceBetween: 100,
