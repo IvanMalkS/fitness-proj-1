@@ -25,6 +25,11 @@
   @include custom-h2($primary-text-dark);
 
   text-align: left;
+  max-width: 102px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 169px;
+  }
 }
 
 .games__text {
@@ -33,7 +38,7 @@
   display: grid;
   grid-template-columns: 1fr 56px;
   position: relative;
-  gap: 16px 37px;
+  gap: 16px 52px;
   max-width: 290px;
 
   @media (min-width: $tablet-width) {
@@ -99,12 +104,19 @@
 .games__date-value {
   @include indent-reset;
 
+  flex-wrap: wrap;
   display: flex;
+  max-width: 55px;
   gap: 4px;
 
   @media (min-width: $tablet-width) {
     align-items: center;
     gap: 6px;
+    max-width: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 95px;
   }
 }
 
@@ -135,6 +147,12 @@
 .games__date-number {
   @include indent-reset;
   @include numbers($primary-text-dark);
+
+  max-width: 56px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 92px;
+  }
 }
 
 .games__date-text {
@@ -143,9 +161,16 @@
   @include text-xs($primary-text-dark);
 
   text-align: left;
+  max-width: 33px;
 
   @media (min-width: $tablet-width) {
     @include text-s($primary-text-dark);
+
+    max-width: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 37px;
   }
 }
 

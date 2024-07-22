@@ -1,8 +1,8 @@
 .feedback {
-  position: relative;
   padding-top: 71px;
   padding-bottom: 70px;
-  background-color: $seconadary-blocks-dark;
+  background-color: $secondary-blocks-dark;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
@@ -29,14 +29,14 @@
   left: -15px;
   right: -15px;
   width: calc(100% + 30px);
+  background-color: $secondary-blocks-dark;
   height: 100%;
-  background-color: $seconadary-blocks-dark;
 
   @media (min-width: $tablet-width) {
     left: -164px;
     right: -164px;
     width: calc(100% + 164px);
-    height: 51%;
+    height: 50.9%;
   }
 
   @media (min-width: $desktop-width) {

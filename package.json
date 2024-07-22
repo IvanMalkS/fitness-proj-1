@@ -18,7 +18,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --fix",
     "lint-js": "eslint source/js --fix",
     "ls-lint": "ls-lint",
-    "editorconfig": "editorconfig-cli"
+    "editorconfig": "editorconfig-cli source/*"
   },
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "3.0.0",

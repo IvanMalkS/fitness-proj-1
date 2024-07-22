@@ -2,6 +2,10 @@
   padding-top: 41px;
   padding-bottom: 40px;
 
+  @media (max-width: $mobile-width-only) {
+    max-width: $mobile-width;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 30px;
     padding-bottom: 60px;
@@ -67,6 +71,7 @@
   outline: none;
   transition: all 0.3s ease;
   cursor: pointer;
+  background-color: $secondary-blocks;
 
   @media (max-width: $mobile-width-only) {
     margin-left: 29px;
@@ -94,6 +99,8 @@
 
   @media (min-width: $desktop-width) {
     @include custom-h6($primary-text-dark);
+
+    max-width: 177px;
   }
 }
 
@@ -106,8 +113,6 @@
   display: none;
 }
 
-.juri__human:hover .juri__proffesion,
-.juri__human:hover .juri__achievements,
 .juri__human:focus .juri__proffesion,
 .juri__human:focus .juri__achievements {
   display: block;
@@ -117,12 +122,11 @@
   padding-bottom: 8px;
 }
 
-.juri__human:hover .juri__text,
 .juri__human:focus .juri__text {
   padding: 46px 41px 51px 42px;
+  justify-content: start;
 }
 
-.juri__human:hover::before,
 .juri__human:focus::before {
   content: "";
   width: 100%;
@@ -133,20 +137,46 @@
   background-color: rgba(16, 38, 84, 0.89);
 }
 
-.juri__human:hover,
 .juri__human:focus {
   box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+}
+
+@media (min-width: $desktop-width) {
+  .juri__human:hover {
+    box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+  }
+
+  .juri__human:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  .juri__human:hover .juri__text {
+    padding: 46px 41px 51px 42px;
+    justify-content: start;
+  }
+
+  .juri__human:hover .juri__proffesion,
+  .juri__human:hover .juri__achievements {
+    display: block;
+  }
 }
 
 .juri__text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
   z-index: 2;
-  padding: 253px 0 25px;
+  padding: 23px 0 25px;
+  min-height: 300px;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -225,7 +255,7 @@
     height: 32px;
     mask-repeat: no-repeat;
     mask-size: 18px 32px;
-    background-color: $seconadary-blocks-dark;
+    background-color: $secondary-blocks-dark;
     mask-image: url("/__spritemap#sprite-arrow-view");
     position: absolute;
     top: 50%;

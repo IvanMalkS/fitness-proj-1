@@ -2,6 +2,10 @@
   padding-top: 40px;
   padding-bottom: 40px;
 
+  @media (max-width: $mobile-width-only) {
+    max-width: $mobile-width;
+  }
+
   @media (min-width: $tablet-width) {
     padding-top: 60px;
     padding-bottom: 59px;
@@ -57,8 +61,8 @@
   max-width: 240px;
   padding: 30px 25px 29px;
   text-align: center;
-  background-color: $seconadary-blocks;
-  box-shadow: 0 0 40px 0 $seconadary-blocks-shadow;
+  background-color: $secondary-blocks;
+  box-shadow: 0 0 40px 0 $secondary-blocks-shadow;
   color: $primary-text-dark;
   min-height: 328px;
 
@@ -180,7 +184,7 @@
     height: 32px;
     mask-repeat: no-repeat;
     mask-size: 18px 32px;
-    background-color: $seconadary-blocks-dark;
+    background-color: $secondary-blocks-dark;
     mask-image: url("/__spritemap#sprite-arrow-view");
     position: absolute;
     top: 50%;

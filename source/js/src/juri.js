@@ -33,6 +33,7 @@ const SWIPER_CONFIG = {
       slidesPerView: 4,
       spaceBetween: 28,
       slidesPerGroup: DESKTOP_SLIDES_PER_GROUP,
+      simulateTouch: false,
     },
   },
 };

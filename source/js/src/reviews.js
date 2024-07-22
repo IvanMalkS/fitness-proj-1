@@ -24,6 +24,7 @@ const SWIPER_CONFIG = {
     1366: {
       spaceBetween: 800,
       width: 560,
+      simulateTouch: false,
     },
   },
 };

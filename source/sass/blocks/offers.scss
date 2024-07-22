@@ -78,6 +78,12 @@
   height: 360px;
   width: 320px;
 
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   @media (min-width: $tablet-width) {
     width: 400px;
     min-width: 400px;
